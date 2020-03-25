@@ -1,4 +1,4 @@
-package com.example.fledge_demo_app
+package com.orbsoft.fledge_demo_app
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

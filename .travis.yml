@@ -67,7 +67,7 @@ jobs:
       language: generic
       before_install:
         - ANDROID_COMPILE_SDK=28
-        - ANDROID_BUILD_TOOLS=28.0.1
+        - ANDROID_BUILD_TOOLS=28.0.3
         - ANDROID_SDK_TOOLS=4333796
 
         # Install android tools
@@ -95,7 +95,7 @@ jobs:
         - sdkmanager --list | head -15
 
       install:
-        - sudo apt-get install -y --no-install-recommends lib32stdc++6 libstdc++6 > /dev/null
+#        - sudo apt-get install -y --no-install-recommends lib32stdc++6 libstdc++6 > /dev/null
 
         # install version of fastlane described in Gemfile.lock
         - gem install bundler:2.0.1

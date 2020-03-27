@@ -31,9 +31,12 @@ jobs:
         # fix timezone warning on osx
         - sudo ln -sf /usr/share/zoneinfo/US/Pacific /etc/localtime
 
+        # add remote match server to known hosts
+        # - ssh-keyscan -t ecdsa -p "$SSH_SERVER_PORT" "$SSH_SERVER" >> ~/.ssh/known_hosts
+
         # install version of fastlane from Gemfile.lock
-        - gem install bundler:2.0.1
-        - (cd example; bundle install)
+        - gem install bundler:2.0.2
+        - bundle install
 
         # install flutter
         - wget --quiet --output-document=flutter.zip https://storage.googleapis.com/flutter_infra/releases/${FLUTTER_CHANNEL}/macos/flutter_macos_v${FLUTTER_VERSION}.zip && unzip -qq flutter.zip > /dev/null && rm flutter.zip
@@ -98,7 +101,7 @@ jobs:
 #        - sudo apt-get install -y --no-install-recommends lib32stdc++6 libstdc++6 > /dev/null
 
         # install version of fastlane described in Gemfile.lock
-        - gem install bundler:2.0.1
+        - gem install bundler:2.0.2
         - bundle install
 
         # install flutter
@@ -126,7 +129,7 @@ jobs:
         - sudo ln -sf /usr/share/zoneinfo/US/Pacific /etc/localtime
 
         # install version of fastlane from Gemfile.lock
-        - gem install bundler:2.0.1
+        - gem install bundler:2.0.2
         - bundle install > /dev/null
       script:
         # fail on error

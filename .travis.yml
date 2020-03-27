@@ -89,7 +89,7 @@ jobs:
         - java -version
 
         # Accept licenses before installing components
-        - yes | sdkmanager --licenses
+        - yes | sdkmanager --licenses > /dev/null
         # Platform tools
         - yes | sdkmanager "platform-tools" "platforms;android-${ANDROID_COMPILE_SDK}" "build-tools;${ANDROID_BUILD_TOOLS}" > /dev/null
         - sdkmanager --list | head -15
@@ -99,7 +99,7 @@ jobs:
 
         # install version of fastlane described in Gemfile.lock
         - gem install bundler:2.0.1
-        - bundle install > /dev/null
+        - bundle install
 
         # install flutter
         - wget --quiet --output-document=flutter.tar.xz https://storage.googleapis.com/flutter_infra/releases/${FLUTTER_CHANNEL}/linux/flutter_linux_v${FLUTTER_VERSION}.tar.xz && tar xf flutter.tar.xz > /dev/null && rm flutter.tar.xz

@@ -24,6 +24,11 @@ Generate release notes
 ----
 
 ## iOS
+### ios enable_match_code_signing
+```
+fastlane ios enable_match_code_signing
+```
+enable match code signing
 ### ios beta
 ```
 fastlane ios beta

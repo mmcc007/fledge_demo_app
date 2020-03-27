@@ -25,7 +25,7 @@ jobs:
       os: osx
       osx_image: xcode11.2 # macOS 10.14, JDK 13.0.1
       language: generic
-      env: "Deploy beta to ios testers"
+      env: desc="Deploy beta to ios testers"
 
       install:
         # fix timezone warning on osx
@@ -63,7 +63,7 @@ jobs:
 #          - dev
 #          - master
 #      os: trusty
-      env: "Deploy beta to android testers"
+      env: desc="Deploy beta to android testers"
       language: generic
       before_install:
         - ANDROID_COMPILE_SDK=28
@@ -120,7 +120,7 @@ jobs:
       if: branch = master
       os: osx
       language: generic
-      env: Deploy to stores
+      env: desc="Deploy to stores"
       install:
         # fix timezone warning on osx
         - sudo ln -sf /usr/share/zoneinfo/US/Pacific /etc/localtime

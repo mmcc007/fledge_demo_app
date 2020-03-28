@@ -32,7 +32,11 @@ jobs:
         - sudo ln -sf /usr/share/zoneinfo/US/Pacific /etc/localtime
 
         # add remote match server to known hosts
-        - ssh-keyscan -t ecdsa -p "$SSH_SERVER_PORT" "$SSH_SERVER" >> ~/.ssh/known_hosts
+#        - ls -la ~/.ssh
+#        - (git clone $PUBLISHING_MATCH_CERTIFICATE_REPO)
+#        - ssh-keyscan -t ecdsa -p "$SSH_SERVER_PORT" "$SSH_SERVER" >> ~/.ssh/known_hosts
+#        - cat ~/.ssh/known_hosts
+#        - (git clone $PUBLISHING_MATCH_CERTIFICATE_REPO)
 
         # install version of fastlane from Gemfile.lock
         - gem install bundler:2.0.2

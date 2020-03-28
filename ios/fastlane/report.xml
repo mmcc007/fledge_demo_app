@@ -5,27 +5,17 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: opt_out_usage" time="0.006846">
+      <testcase classname="fastlane.lanes" name="0: opt_out_usage" time="0.004648">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: setup_travis" time="0.001104">
+      <testcase classname="fastlane.lanes" name="1: setup_travis" time="0.001143">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: default_platform" time="0.000762">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="3: sync_code_signing" time="3.24253">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="4: update_project_provisioning" time="0.093084">
+      <testcase classname="fastlane.lanes" name="2: default_platform" time="0.000835">
         
       </testcase>
     
